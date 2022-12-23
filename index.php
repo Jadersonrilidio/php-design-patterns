@@ -2,7 +2,7 @@
 
 require_once('vendor/autoload.php');
 
-use \Book\ChapterOne\Example;
+use \Src\Example;
 
 $example = new Example();
 

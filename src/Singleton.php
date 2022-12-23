@@ -1,6 +1,6 @@
 <?php
 
-namespace Book\ChapterOne;
+namespace Src;
 
 class Singleton
 {
