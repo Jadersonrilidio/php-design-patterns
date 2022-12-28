@@ -3,3 +3,7 @@ vendor
 vendor/*
 .env
 notes.txt
+app
+app/*
+resources
+resources/*
