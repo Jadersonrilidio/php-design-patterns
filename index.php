@@ -310,3 +310,7 @@ require_once('vendor/autoload.php');
 
 # TEMPLATE METHOD
 
+use \Src\Behavioral\TemplateMethod\MeatballPasta;
+
+$dish = new MeatballPasta(true);
+$dish->cook();
