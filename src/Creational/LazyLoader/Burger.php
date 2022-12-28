@@ -8,7 +8,7 @@ class Burger
     private $chips;
     private $price;
 
-    public function _construct(bool $cheese, bool $chips)
+    public function __construct(bool $cheese, bool $chips)
     {
         $this->cheese = $cheese;
         $this->chips = $chips;

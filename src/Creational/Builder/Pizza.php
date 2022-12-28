@@ -21,7 +21,7 @@ class Pizza
 
     public function show()
     {
-        $recipe = $this->size . "inch pizza with the following toppings: ";
+        $recipe = $this->size . " inch pizza with the following toppings: ";
         $recipe .= $this->cheese ? 'cheese, ' : '';
         $recipe .= $this->pepperoni ? 'pepperoni, ' : '';
         $recipe .= $this->bacon ? 'bacon, ' : '';

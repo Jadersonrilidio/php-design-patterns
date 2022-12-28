@@ -6,7 +6,7 @@ use \Src\Creational\LazyLoader\Burger;
 
 class BurgerLazyLoader
 {
-    private static $instances = array();
+    public static $instances = array();
 
     public static function getBurguer(bool $cheese, bool $chips): Burger
     {
