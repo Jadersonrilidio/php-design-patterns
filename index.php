@@ -2,15 +2,13 @@
 
 require_once('vendor/autoload.php');
 
-
-
 # -----------------------------------------------------------------------------------
 
 # GENERAL TESTS
 
 // use \Src\Example;
 // $example = new Example();
-// var_dump($example); //todo. hide private attributes not successful
+// var_dump($example); // hide private attributes not successful
 
 // use \Src\Environment;
 // Environment::start();
@@ -310,7 +308,90 @@ require_once('vendor/autoload.php');
 
 # TEMPLATE METHOD
 
-use \Src\Behavioral\TemplateMethod\MeatballPasta;
+// use \Src\Behavioral\TemplateMethod\MeatballPasta;
+// use \Src\Behavioral\TemplateMethod\VeganPasta;
 
-$dish = new MeatballPasta(true);
-$dish->cook();
+// $dish = new MeatballPasta(true);
+// $dish->cook();
+
+// $dish = new VeganPasta();
+// $dish->cook();
+
+# -----------------------------------------------------------------------------------
+
+# CHAIN OF RESPONSIBILITY
+
+// use \Src\Behavioral\ChainOfResponsibility\AssociatePurchaser;
+// use \Src\Behavioral\ChainOfResponsibility\ManagerPurchaser;
+// use \Src\Behavioral\ChainOfResponsibility\DirectorPurchaser;
+// use \Src\Behavioral\ChainOfResponsibility\BoardPurchaser;
+
+// $associate = new AssociatePurchaser('Jay');
+// $manager = new ManagerPurchaser('Jack');
+// $director = new DirectorPurchaser('Jackson');
+// $board = new BoardPurchaser('Jaderson');
+
+// $associate->setNextPurchaser($manager);
+// $manager->setNextPurchaser($director);
+// $director->setNextPurchaser($board);
+
+// $associate->buy(11000);
+
+# -----------------------------------------------------------------------------------
+
+# STRATEGY
+
+// use \Src\Behavioral\Strategy\RaiseNumber;
+// use \Src\Behavioral\Strategy\Square;
+// use \Src\Behavioral\Strategy\Cube;
+
+// $value = new RaiseNumber(new Square());
+// var_dump($value->raise(8));
+
+// $value = new RaiseNumber(new Cube());
+// var_dump($value->raise(8));
+
+# -----------------------------------------------------------------------------------
+
+# SPECIFICATION             (https://martinfowler.com/apsupp/spec.pdf)
+
+# PS: Composite Specifications allow you to combine specifications. By using the AND , NOT , OR and NOR operators you are able to build their respective functions into different specification classes.
+
+// use \Src\Behavioral\Specification\EmployeeIsEngineer;
+
+// $workers = array();
+
+// $workers['A'] = new StdClass();
+// $workers['A']->title = 'Developer';
+// $workers['A']->department = 'Engineering';
+// $workers['A']->salary = 50000;
+
+// $workers['B'] = new StdClass();
+// $workers['B']->title = 'Data Analist';
+// $workers['B']->department = 'Engineering';
+// $workers['B']->salary = 30000;
+
+// $workers['C'] = new StdClass();
+// $workers['C']->title = 'Personal Assistant';
+// $workers['C']->department = 'CEO';
+// $workers['C']->salary = 25000;
+
+// $isEngineer = new EmployeeIsEngineer();
+
+// foreach ($workers as $id => $worker) {
+//     if ($isEngineer->isSatisfiedBy($worker)) {
+//         var_dump($id, $worker);
+//     }
+// }
+
+# -----------------------------------------------------------------------------------
+
+# SCHEDULED TASK
+
+/*
+the task
+the jobs that schedule (provided whens and whys)
+the job registry to execute jobs
+*/
+
+# -----------------------------------------------------------------------------------
