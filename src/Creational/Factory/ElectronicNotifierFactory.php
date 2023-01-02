@@ -4,6 +4,8 @@ namespace Src\Creational\Factory;
 
 use \Exception;
 use \Src\Creational\Factory\NotifierFactory;
+use \Src\Creational\Factory\Email;
+use \Src\Creational\Factory\SMS;
 
 class ElectronicNotifierFactory implements NotifierFactory
 {

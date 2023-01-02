@@ -9,15 +9,10 @@ class Email extends Notifier
 {
     private $from;
 
-    public function __construct(string $to, string $from)
+    public function __construct(string $to, string $from = "Anonimous")
     {
         parent::__construct($to);
-
-        if (isset($from)) {
-            $this->from = $from;
-        } else {
-            $this->from = "Anonimous";
-        }
+        $this->from = $from;
     }
 
     public function validateTo(): bool
